@@ -47,7 +47,7 @@ export function FAQSection() {
   ]
 
   return (
-    <div className="py-16 px-8 bg-[#f5f3f0]">
+    <div className="py-16 px-8 bg-[#E6E3E0]">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-serif text-center mb-16">PREGUNTAS FRECUENTES</h2>
 
