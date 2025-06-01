@@ -81,7 +81,7 @@ export function TiersSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-x divide-[#D0CCC8]">
         {tiers.map((tier, index) => (
           <Card key={index}>
-            <CardContent className="p-5 h-full flex flex-col gap-8">
+            <CardContent className="p-5 h-full flex flex-col gap-9">
               
               <div className="flex items-center justify-between">
                 <p className="text-xs font-semibold text-gray-900">{tier.title}</p>
@@ -105,7 +105,13 @@ export function TiersSection() {
                   {tier.features.map((feature, index) => (
                     <li key={index} className="flex items-start text-sm text-gray-700">
                       <span className="mr-2 text-gray-400">•</span>
-                      <span>{feature}</span>
+                      <span>
+                        {feature === "2 entradas" || feature === "1 entrada" ? (
+                          <strong>{feature}</strong>
+                        ) : (
+                          feature
+                        )}
+                      </span>
                     </li>
                   ))}
                 </ul>

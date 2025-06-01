@@ -13,8 +13,8 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-[#2E211F] mt-8 pt-8 text-center text-[#705243] font-serif flex justify-between">
-          <p>© {new Date().getFullYear()} Vernissage. Todos los secretos reservados.</p>
-          <p>Diseño por <a href="https://deadpine.xyz" target="_blank" rel="noopener noreferrer">deadpine.xyz</a></p>
+          <p>© {new Date().getFullYear()} Vernissage - todos los secretos reservados.</p>
+          <p>diseño por <a href="https://deadpine.xyz" target="_blank" rel="noopener noreferrer" className="italic hover:text-[#A17345]">deadpine.xyz</a></p>
         </div>
       </div>
     </footer>
