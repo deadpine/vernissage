@@ -1,8 +1,8 @@
-import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
-import { ExperienceSection } from "@/components/experience-section"
-import { TiersSection } from "@/components/tiers-section"
-import { FAQSection } from "@/components/faq-section"
+import { HeroSection } from "@/components/hero"
+import { AboutSection } from "@/components/about"
+import { ExperienceSection } from "@/components/experience"
+import { TiersSection } from "@/components/tiers"
+import { FAQSection } from "@/components/faq"
 import { Footer } from "@/components/footer"
 
 export default function Page() {
