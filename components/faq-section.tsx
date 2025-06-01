@@ -17,32 +17,32 @@ export function FAQSection() {
     {
       question: "¿Dónde y cuándo se realiza?",
       answer:
-        "Las presentaciones se realizan en diferentes espacios culturales de la ciudad. Las fechas y horarios específicos se anuncian en nuestra página web y redes sociales con anticipación.",
+        "La primera edición de Vernissage será en el mes de Noviembre en Punta del Este. Las fechas, horarios y ubicación serán comunicados a quienes adquieran sus tickets.",
     },
     {
       question: "¿Hasta cuándo se puede comprar el ticket?",
       answer:
-        "Los tickets están disponibles hasta agotar el cupo para cada función. Recomendamos comprar con anticipación ya que las entradas suelen agotarse rápidamente.",
+        "Los tickets solo están disponibles en esta preventa. Con la compra de tu ticket nos ayudas a financiar la producción de la obra. No habrá venta de tickets en la entrada y los cupos son limitados por lo cual te recomendamos adquirir el tuyo lo antes posible! ",
     },
     {
       question: "¿Una vez que compre el ticket que pasa?",
       answer:
-        "Una vez realizada la compra, recibirás un correo electrónico con la confirmación y los detalles de tu reserva. El día del evento deberás presentar tu confirmación digital o impresa.",
+        "Vas a recibir un mail de confirmación y un mes antes del estreno te vamos a contactar para que puedas agendarte para alguna de las funciones previstas durante el mes de Noviembre.",
     },
     {
       question: "¿La experiencia es apta para todo público?",
       answer:
-        "La experiencia está recomendada para mayores de 16 años. Algunas escenas pueden contener temáticas adultas y el recorrido requiere cierta movilidad física.",
+        "Está dirigida principalmente a un público adulto por el contenido conceptual y el diseño del espacio, pero no contiene material explícito.",
     },
     {
       question: "¿Se pueden tomar fotos o filmar durante la experiencia?",
       answer:
-        "Para preservar la inmersión y la privacidad de todos los participantes, no se permite tomar fotografías ni videos durante la experiencia. Habrá momentos específicos al final donde se podrán tomar recuerdos.",
+        "No. al igual que cuando vas al cine y/o teatro, los celulares deberán permanecer en silencio, evitar la interacción con el dispositivo móvil y se taparán las cámaras con un sticker. Lo que pase esa noche… solo lo sabrán quienes estén allí.",
     },
     {
       question: "¿Cómo puedo apoyar el proyecto?",
       answer:
-        "Puedes apoyar el proyecto adquiriendo alguno de nuestros niveles de patrocinio que se muestran en esta página. Cada aporte nos ayuda a seguir creando experiencias artísticas innovadoras.",
+        "Además de adquirir las entradas especiales “mecenas” y “admirador secreto”, podés sumarte como colaborador, aliado o patrocinador. Escribinos a hola@vernissageteatro.com para más info.",
     },
   ]
 
