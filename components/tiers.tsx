@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 interface Tier {
-  id: string
   title: string
   price: string
   image: string
@@ -15,16 +14,14 @@ interface Tier {
 
 const tiers: Tier[] = [
   {
-    id: "01",
     title: "CÓMPLICE",
-    price: "USD 50",
+    price: "50",
     image: "/images/complice.png",
     features: ["Tu nombre en los agradecimientos", "Acceso anticipado a noticias"],
   },
   {
-    id: "02",
     title: "EN LA LISTA",
-    price: "USD 150",
+    price: "150",
     image: "/images/en-la-lista.png",
     features: [
       "1 entrada", 
@@ -33,9 +30,8 @@ const tiers: Tier[] = [
     ],
   },
   {
-    id: "03",
     title: "ANFITRIÓN",
-    price: "USD 300",
+    price: "300",
     image: "/images/anfitrion.png",
     features: [
       "2 entradas",
@@ -45,9 +41,8 @@ const tiers: Tier[] = [
     ],
   },
   {
-    id: "04",
     title: "MECENAS",
-    price: "USD 600",
+    price: "600",
     image: "/images/mecenas.png",
     features: [
       "2 entradas",
@@ -58,9 +53,8 @@ const tiers: Tier[] = [
     ],
   },
   {
-    id: "05",
     title: "ADMIRADOR SECRETO",
-    price: "USD 1000",
+    price: "1000",
     image: "/images/admirador-secreto.png",
     features: [
       "2 entradas",
@@ -84,20 +78,20 @@ export function TiersSection() {
 
   return (
     <div id="tiers-section" className="py-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
-        {tiers.map((tier) => (
-          <Card key={tier.id} className="border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-            <CardContent className="p-6 h-full flex flex-col">
-              <div className="mb-6">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600">{tier.id}</span>
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h4>
-                  <span className="text-sm font-medium text-gray-900">{tier.price}</span>
-                </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-x divide-[#D0CCC8]">
+        {tiers.map((tier, index) => (
+          <Card key={index}>
+            <CardContent className="p-5 h-full flex flex-col gap-8">
+              
+              <div className="flex items-center justify-between">
+                <p className="text-xs font-semibold text-gray-900">{tier.title}</p>
+                <p className="text-xs font-medium text-gray-700">
+                  USD <span className="font-bold text-gray-900">{tier.price}</span>
+                </p>
               </div>
 
-              <div className="flex-1 flex items-center justify-center mb-6">
-                <div className="w-32 h-32 flex items-center justify-center">
+              <div className="flex items-center justify-center">
+                <div className="w-fill h-auto flex items-center justify-center">
                   <img
                     src={tier.image || "/placeholder.svg"}
                     alt={tier.title}
@@ -106,7 +100,7 @@ export function TiersSection() {
                 </div>
               </div>
 
-              <div className="mb-8">
+              <div className="flex-1">
                 <ul className="space-y-2">
                   {tier.features.map((feature, index) => (
                     <li key={index} className="flex items-start text-sm text-gray-700">
@@ -132,7 +126,7 @@ export function TiersSection() {
       <Dialog open={showCheckout} onOpenChange={setShowCheckout}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-center">¡Gracias por tu interés!</DialogTitle>
+            <DialogTitle className="text-2xl font-bold text-center">¡Gracias por tu apoyo!</DialogTitle>
           </DialogHeader>
 
           <div className="py-6 text-center space-y-4">
