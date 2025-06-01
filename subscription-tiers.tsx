@@ -35,7 +35,11 @@ export default function Component() {
       title: "EN LA LISTA",
       price: "USD 150",
       image: "/images/en-la-lista.png",
-      features: ["1 entrada", "Tu nombre en los agradecimientos", "Acceso anticipado a noticias"],
+      features: [
+        "1 entrada", 
+        "Tu nombre en los agradecimientos", 
+        "Acceso anticipado a noticias"
+      ],
     },
     {
       id: "03",
@@ -90,53 +94,54 @@ export default function Component() {
         <AboutSection />
         <ExperienceSection />
 
-        <div id="tiers-section" className="p-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {tiers.map((tier) => (
-                <Card key={tier.id} className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6 h-full flex flex-col">
-                    <div className="mb-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-gray-600">{tier.id}</span>
-                        <span className="text-sm font-medium text-gray-900">{tier.price}</span>
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h3>
+        <div id="tiers-section" className="py-20">
+        
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+            {tiers.map((tier) => (
+              <Card key={tier.id} className="border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-6 h-full flex flex-col">
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-gray-600">{tier.id}</span>
+                      <h4 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h4>
+                      <span className="text-sm font-medium text-gray-900">{tier.price}</span>
                     </div>
+                    
+                  </div>
 
-                    <div className="flex-1 flex items-center justify-center mb-6">
-                      <div className="w-32 h-32 flex items-center justify-center">
-                        <img
-                          src={tier.image || "/placeholder.svg"}
-                          alt={tier.title}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
+                  <div className="flex-1 flex items-center justify-center mb-6">
+                    <div className="w-32 h-32 flex items-center justify-center">
+                      <img
+                        src={tier.image || "/placeholder.svg"}
+                        alt={tier.title}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
+                  </div>
 
-                    <div className="mb-8">
-                      <ul className="space-y-2">
-                        {tier.features.map((feature, index) => (
-                          <li key={index} className="flex items-start text-sm text-gray-700">
-                            <span className="mr-2 text-gray-400">•</span>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="mb-8">
+                    <ul className="space-y-2">
+                      {tier.features.map((feature, index) => (
+                        <li key={index} className="flex items-start text-sm text-gray-700">
+                          <span className="mr-2 text-gray-400">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                    <Button
-                      onClick={() => handlePurchaseClick(tier)}
-                      variant="outline"
-                      className="w-full mt-auto bg-transparent border-gray-400 text-gray-700 hover:bg-gray-50 rounded-full py-6"
-                    >
-                      COMPRAR
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  <Button
+                    onClick={() => handlePurchaseClick(tier)}
+                    variant="outline"
+                    className="w-full mt-auto bg-transparent border-gray-400 text-gray-700 hover:bg-gray-50 rounded-full py-6"
+                  >
+                    COMPRAR
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
+        
         </div>
 
         <FAQSection />
