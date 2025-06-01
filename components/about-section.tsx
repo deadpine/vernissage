@@ -16,7 +16,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
           {/* Left side - Text content */}
           <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-gray-900 leading-tight">VERNISSAGE</h1>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading text-gray-900 leading-tight">VERNISSAGE</h2>
 
             <div className="space-y-6 text-lg text-gray-800 font-serif leading-relaxed">
               <p>

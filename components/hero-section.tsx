@@ -45,7 +45,7 @@ export function HeroSection() {
       <div className="flex items-center justify-center min-h-screen px-8">
         <div className="text-center relative">
           {/* Main title */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-[#d4af37] leading-none mb-8 tracking-wider">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading text-[#d4af37] leading-none mb-8 tracking-wider">
             VERNISSAGE
           </h1>
 

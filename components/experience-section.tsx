@@ -16,7 +16,7 @@ export function ExperienceSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">LA EXPERIENCIA</h2>
+            <h2 className="text-5xl md:text-6xl font-heading text-white">LA EXPERIENCIA</h2>
 
             <div className="text-lg text-gray-200 font-serif leading-relaxed">
               <p className="mb-8">

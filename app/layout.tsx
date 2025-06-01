@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
+import "./fonts.css"
 import { EB_Garamond } from "next/font/google"
 import { GeistSans } from "geist/font/sans"
 
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${garamond.variable} ${geist.variable}`}>
-      <body className={geist.className}>{children}</body>
+      <body className={`${geist.className} antialiased`}>{children}</body>
     </html>
   )
 }

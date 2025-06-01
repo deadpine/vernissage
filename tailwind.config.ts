@@ -20,6 +20,7 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-garamond)", "EB Garamond", "serif"],
         sans: ["var(--font-geist)", "Geist", "system-ui", "sans-serif"],
+        heading: ["PP Right Serif", "serif"],
       },
       colors: {
         background: "hsl(var(--background))",

@@ -49,9 +49,11 @@ export function FAQSection() {
   return (
     <div className="py-40 px-8 bg-[#E9E5E2]">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-serif text-center mb-24">PREGUNTAS FRECUENTES</h2>
+        <h2 className="text-5xl md:text-6xl font-heading text-gray-900 leading-tight text-center">
+          PREGUNTAS FRECUENTES
+        </h2>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="mt-24 space-y-4">
           {faqs.map((faq, index) => (
             <div key={index}>
               <AccordionItem value={`item-${index}`} className="border-b border-[#D0CBC8] pb-4">
