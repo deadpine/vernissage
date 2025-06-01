@@ -22,7 +22,7 @@ export function HeroSection() {
       </div>
 
       {/* Top navigation elements */}
-      <div className="flex justify-between items-center p-6 relative">
+      <div className="flex justify-between items-center p-4 md:p-6 relative">
         <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">UN ARTISTA</p>
         <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">UNA CASA</p>
         <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">UN MISTERIO</p>
@@ -38,7 +38,7 @@ export function HeroSection() {
       </div>
 
       {/* Bottom elements */}
-      <div className="flex justify-between items-center p-6 relative">
+      <div className="flex justify-between items-center p-4 md:p-6 relative">
         <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">NOVIEMBRE 2025</p>
         <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">PUNTA DEL ESTE</p>
       </div>
