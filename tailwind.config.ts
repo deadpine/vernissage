@@ -18,7 +18,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        serif: ["var(--font-playfair)", "serif"],
+        serif: ["var(--font-garamond)", "EB Garamond", "serif"],
+        sans: ["var(--font-geist)", "Geist", "system-ui", "sans-serif"],
       },
       colors: {
         background: "hsl(var(--background))",
