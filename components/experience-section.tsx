@@ -11,7 +11,7 @@ export function ExperienceSection() {
   }
 
   return (
-    <div className="py-16 px-8 bg-[#1a1a18] text-white">
+    <div className="py-16 px-8 bg-[#26221C] text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
