@@ -11,9 +11,9 @@ export function AboutSection() {
   }
 
   return (
-    <div className="py-16 px-8 bg-[#f5f3f0]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div className="bg-[#f5f3f0]">
+      <div className="max-w-7xl mx-auto min-h-[calc(90vh-100px)]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
           {/* Left side - Text content */}
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-gray-900 leading-tight">VERNISSAGE</h1>
@@ -41,17 +41,14 @@ export function AboutSection() {
           </div>
 
           {/* Right side - Image */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl">
-                <img
-                  src="/images/statue-ivy.png"
-                  alt="Classical statue surrounded by ivy"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+          <div className="flex justify-center">
+            <img
+              src="/images/statue-ivy.png"
+              alt="Classical statue surrounded by ivy"
+              className="w-auto h-full object-cover max-h-[700px]"
+            />
           </div>
+
         </div>
       </div>
     </div>
