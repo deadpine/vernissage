@@ -11,20 +11,10 @@ export function Footer() {
             <h3 className="text-xl font-serif mb-4">CONTACTO</h3>
             <p className="text-gray-300 font-serif">hola@vernissageteatro.com</p>
           </div>
-          <div>
-            <h3 className="text-xl font-serif mb-4">SÍGUENOS</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-gray-300 transition-colors">
-                Instagram
-              </a>
-              <a href="#" className="text-white hover:text-gray-300 transition-colors">
-                Twitter
-              </a>
-            </div>
-          </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 font-serif">
           <p>© {new Date().getFullYear()} Vernissage. Todos los derechos reservados.</p>
+          <p>Diseñado por <a href="https://deadpine.xyz" target="_blank" rel="noopener noreferrer">deadpine.xyz</a></p>
         </div>
       </div>
     </footer>
