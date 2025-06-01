@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { HeroSection } from "./components/hero-section"
 import { FAQSection } from "./components/faq-section"
 import { AboutSection } from "./components/about-section"
 import { ExperienceSection } from "./components/experience-section"
@@ -83,60 +84,63 @@ export default function Component() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f3f0]">
-      <AboutSection />
-      <ExperienceSection />
+    <div className="min-h-screen">
+      <HeroSection />
+      <div className="bg-[#f5f3f0]">
+        <AboutSection />
+        <ExperienceSection />
 
-      <div id="tiers-section" className="p-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {tiers.map((tier) => (
-              <Card key={tier.id} className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-6 h-full flex flex-col">
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-gray-600">{tier.id}</span>
-                      <span className="text-sm font-medium text-gray-900">{tier.price}</span>
+        <div id="tiers-section" className="p-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {tiers.map((tier) => (
+                <Card key={tier.id} className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6 h-full flex flex-col">
+                    <div className="mb-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-medium text-gray-600">{tier.id}</span>
+                        <span className="text-sm font-medium text-gray-900">{tier.price}</span>
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h3>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h3>
-                  </div>
 
-                  <div className="flex-1 flex items-center justify-center mb-6">
-                    <div className="w-32 h-32 flex items-center justify-center">
-                      <img
-                        src={tier.image || "/placeholder.svg"}
-                        alt={tier.title}
-                        className="w-full h-full object-contain"
-                      />
+                    <div className="flex-1 flex items-center justify-center mb-6">
+                      <div className="w-32 h-32 flex items-center justify-center">
+                        <img
+                          src={tier.image || "/placeholder.svg"}
+                          alt={tier.title}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mb-8">
-                    <ul className="space-y-2">
-                      {tier.features.map((feature, index) => (
-                        <li key={index} className="flex items-start text-sm text-gray-700">
-                          <span className="mr-2 text-gray-400">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    <div className="mb-8">
+                      <ul className="space-y-2">
+                        {tier.features.map((feature, index) => (
+                          <li key={index} className="flex items-start text-sm text-gray-700">
+                            <span className="mr-2 text-gray-400">•</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  <Button
-                    onClick={() => handlePurchaseClick(tier)}
-                    variant="outline"
-                    className="w-full mt-auto bg-transparent border-gray-400 text-gray-700 hover:bg-gray-50 rounded-full py-6"
-                  >
-                    COMPRAR
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                    <Button
+                      onClick={() => handlePurchaseClick(tier)}
+                      variant="outline"
+                      className="w-full mt-auto bg-transparent border-gray-400 text-gray-700 hover:bg-gray-50 rounded-full py-6"
+                    >
+                      COMPRAR
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <FAQSection />
+        <FAQSection />
+      </div>
       <Footer />
 
       <Dialog open={showCheckout} onOpenChange={setShowCheckout}>
