@@ -43,7 +43,7 @@ export function HeroSection() {
             y="50%" 
             dominantBaseline="middle" 
             textAnchor="middle"
-            className="text-[25vw] md:text-[10vw] font-heading blur-[0.2px]"
+            className="text-[12rem] md:text-[9rem] font-heading blur-[0.2px]"
             style={{ fill: "url(#vernissageGradient)" }}
           >
             VERNISSAGE
