@@ -11,7 +11,6 @@ interface Tier {
   id: string
   title: string
   price: string
-  priceValue: number
   image: string
   features: string[]
 }
@@ -25,7 +24,6 @@ export default function Component() {
       id: "01",
       title: "CÓMPLICE",
       price: "USD 50",
-      priceValue: 50,
       image: "/images/complice.png",
       features: ["Tu nombre en los agradecimientos", "Acceso anticipado a noticias"],
     },
@@ -33,7 +31,6 @@ export default function Component() {
       id: "02",
       title: "EN LA LISTA",
       price: "USD 150",
-      priceValue: 150,
       image: "/images/en-la-lista.png",
       features: ["1 entrada", "Tu nombre en los agradecimientos", "Acceso anticipado a noticias"],
     },
@@ -41,7 +38,6 @@ export default function Component() {
       id: "03",
       title: "ANFITRIÓN",
       price: "USD 300",
-      priceValue: 300,
       image: "/images/anfitrion.png",
       features: [
         "2 entradas",
@@ -54,7 +50,6 @@ export default function Component() {
       id: "04",
       title: "MECENAS",
       price: "USD 600",
-      priceValue: 600,
       image: "/images/mecenas.png",
       features: [
         "2 entradas",
@@ -68,7 +63,6 @@ export default function Component() {
       id: "05",
       title: "ADMIRADOR SECRETO",
       price: "USD 1000",
-      priceValue: 1000,
       image: "/images/admirador-secreto.png",
       features: [
         "2 entradas",
@@ -96,7 +90,6 @@ export default function Component() {
             {tiers.map((tier) => (
               <Card key={tier.id} className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="p-6 h-full flex flex-col">
-                  {/* Header */}
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium text-gray-600">{tier.id}</span>
@@ -105,7 +98,6 @@ export default function Component() {
                     <h3 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h3>
                   </div>
 
-                  {/* Image */}
                   <div className="flex-1 flex items-center justify-center mb-6">
                     <div className="w-32 h-32 flex items-center justify-center">
                       <img
@@ -116,7 +108,6 @@ export default function Component() {
                     </div>
                   </div>
 
-                  {/* Features */}
                   <div className="mb-8">
                     <ul className="space-y-2">
                       {tier.features.map((feature, index) => (
@@ -128,7 +119,6 @@ export default function Component() {
                     </ul>
                   </div>
 
-                  {/* Button */}
                   <Button
                     onClick={() => handlePurchaseClick(tier)}
                     variant="outline"
@@ -145,7 +135,6 @@ export default function Component() {
 
       <FAQSection />
 
-      {/* Checkout Modal */}
       <Dialog open={showCheckout} onOpenChange={setShowCheckout}>
         <DialogContent className="max-w-md">
           <DialogHeader>
