@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { FAQSection } from "./components/faq-section"
 import { AboutSection } from "./components/about-section"
+import { ExperienceSection } from "./components/experience-section"
+import { Footer } from "./components/footer"
 
 interface Tier {
   id: string
@@ -83,6 +85,7 @@ export default function Component() {
   return (
     <div className="min-h-screen bg-[#f5f3f0]">
       <AboutSection />
+      <ExperienceSection />
 
       <div id="tiers-section" className="p-8">
         <div className="max-w-7xl mx-auto">
@@ -134,6 +137,7 @@ export default function Component() {
       </div>
 
       <FAQSection />
+      <Footer />
 
       <Dialog open={showCheckout} onOpenChange={setShowCheckout}>
         <DialogContent className="max-w-md">
