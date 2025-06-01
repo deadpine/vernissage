@@ -23,10 +23,10 @@ export function HeroSection() {
       </div>
 
       {/* Top navigation elements */}
-      <div className="flex justify-between items-center p-4 md:p-6 relative">
-        <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">UN ARTISTA</p>
-        <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">UNA CASA</p>
-        <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">UN MISTERIO</p>
+      <div className="flex justify-between items-center py-4 px-3 md:p-6 relative">
+        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">UN ARTISTA</p>
+        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">UNA CASA</p>
+        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">UN MISTERIO</p>
       </div>
 
       {/* Logo */}
@@ -52,9 +52,9 @@ export function HeroSection() {
       </div>
 
       {/* Bottom elements */}
-      <div className="flex justify-between items-center p-4 md:p-6 relative">
-        <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">NOVIEMBRE 2025</p>
-        <p className="text-xs font-medium font-sans tracking-widest text-[#624E3C]">PUNTA DEL ESTE</p>
+      <div className="flex justify-between items-center py-4 px-3 md:p-6 relative">
+        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">NOVIEMBRE 2025</p>
+        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">PUNTA DEL ESTE</p>
       </div>
     </div>
   )
