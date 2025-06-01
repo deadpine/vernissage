@@ -24,14 +24,14 @@ export function HeroSection() {
 
       {/* Top navigation elements */}
       <div className="flex justify-between items-center py-4 px-3 md:p-6 relative">
-        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">UN ARTISTA</p>
-        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">UNA CASA</p>
-        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">UN MISTERIO</p>
+        <p className="text-xs font-semibold font-sans tracking-widest text-gold">UN ARTISTA</p>
+        <p className="text-xs font-semibold font-sans tracking-widest text-gold">UNA CASA</p>
+        <p className="text-xs font-semibold font-sans tracking-widest text-gold">UN MISTERIO</p>
       </div>
 
       {/* Logo */}
-      <div className="text-center pb-[40vh] md:pb-[8vh]">
-        <svg className="w-full h-auto" viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid meet">
+      <div className="text-center pb-[3vh] md:pb-[8vh]">
+        <svg className="w-full h-auto" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet">
           <defs>
             <radialGradient id="vernissageGradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
               <stop offset="0%" stopColor="#4A361C" />
@@ -43,7 +43,7 @@ export function HeroSection() {
             y="50%" 
             dominantBaseline="middle" 
             textAnchor="middle"
-            className="text-[12rem] md:text-[9rem] font-heading blur-[0.2px]"
+            className="text-[19rem] md:text-[9rem] font-heading blur-[0.2px]"
             style={{ fill: "url(#vernissageGradient)" }}
           >
             VERNISSAGE
@@ -53,8 +53,8 @@ export function HeroSection() {
 
       {/* Bottom elements */}
       <div className="flex justify-between items-center py-4 px-3 md:p-6 relative">
-        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">NOVIEMBRE 2025</p>
-        <p className="text-xs font-medium font-sans tracking-widest text-[#705943]">PUNTA DEL ESTE</p>
+        <p className="text-xs font-semibold font-sans tracking-widest text-gold">NOVIEMBRE 2025</p>
+        <p className="text-xs font-semibold font-sans tracking-widest text-gold">PUNTA DEL ESTE</p>
       </div>
     </div>
   )
