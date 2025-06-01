@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Minus, Plus, ExternalLink, User } from "lucide-react"
+import { FAQSection } from "./components/faq-section"
+import { AboutSection } from "./components/about-section"
 
 interface Tier {
   id: string
@@ -209,91 +211,97 @@ export default function Component() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f3f0] p-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {tiers.map((tier) => (
-            <Card key={tier.id} className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6 h-full flex flex-col">
-                {/* Header */}
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-600">{tier.id}</span>
-                    <span className="text-sm font-medium text-gray-900">{tier.price}</span>
+    <div className="min-h-screen bg-[#f5f3f0]">
+      <AboutSection />
+
+      <div id="tiers-section" className="p-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {tiers.map((tier) => (
+              <Card key={tier.id} className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-6 h-full flex flex-col">
+                  {/* Header */}
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-gray-600">{tier.id}</span>
+                      <span className="text-sm font-medium text-gray-900">{tier.price}</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h3>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">{tier.title}</h3>
-                </div>
 
-                {/* Icon/Illustration */}
-                <div className="flex-1 flex items-center justify-center mb-6">
-                  <div className="w-32 h-32 flex items-center justify-center">
-                    {tier.id === "01" && (
-                      <div className="w-24 h-16 bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center border-4 border-yellow-500">
-                        <span className="text-yellow-900 font-bold text-lg">SM</span>
-                      </div>
-                    )}
-                    {tier.id === "02" && (
-                      <div className="relative">
-                        <div className="w-20 h-14 bg-red-800 transform rotate-12"></div>
-                        <div className="absolute top-2 left-2 w-16 h-10 bg-white border border-gray-300"></div>
-                        <div className="absolute top-1 right-1 w-6 h-4 bg-orange-200 border border-orange-400 text-xs"></div>
-                      </div>
-                    )}
-                    {tier.id === "03" && (
-                      <div className="relative">
-                        <div className="w-20 h-16 bg-gray-100 border-2 border-gray-400 rounded-sm"></div>
-                        <div className="absolute top-2 left-2 w-16 h-12 bg-white border border-gray-300"></div>
-                        <div className="absolute top-1 right-1 w-4 h-3 bg-orange-200 border border-orange-400"></div>
-                        <div className="absolute bottom-2 right-2 w-8 h-2 bg-black rounded-full"></div>
-                      </div>
-                    )}
-                    {tier.id === "04" && (
-                      <div className="relative">
-                        <div className="w-20 h-16 bg-gradient-to-b from-yellow-400 to-yellow-600 border-4 border-yellow-500 rounded-sm"></div>
-                        <div className="absolute inset-2 bg-white border border-gray-300"></div>
-                        <div className="absolute top-1 right-1 w-4 h-3 bg-orange-200 border border-orange-400"></div>
-                        <div className="absolute -top-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
-                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
-                        <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
-                        <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
-                      </div>
-                    )}
-                    {tier.id === "05" && (
-                      <div className="relative">
-                        <div className="w-20 h-16 bg-gray-600 rounded-t-full"></div>
-                        <div className="absolute top-4 left-2 w-16 h-8 bg-gray-700 rounded-sm"></div>
-                        <div className="absolute top-6 left-4 w-12 h-4 border-2 border-white"></div>
-                        <div className="absolute top-1 right-2 w-6 h-4 bg-orange-200 border border-orange-400 text-xs"></div>
-                      </div>
-                    )}
+                  {/* Icon/Illustration */}
+                  <div className="flex-1 flex items-center justify-center mb-6">
+                    <div className="w-32 h-32 flex items-center justify-center">
+                      {tier.id === "01" && (
+                        <div className="w-24 h-16 bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center border-4 border-yellow-500">
+                          <span className="text-yellow-900 font-bold text-lg">SM</span>
+                        </div>
+                      )}
+                      {tier.id === "02" && (
+                        <div className="relative">
+                          <div className="w-20 h-14 bg-red-800 transform rotate-12"></div>
+                          <div className="absolute top-2 left-2 w-16 h-10 bg-white border border-gray-300"></div>
+                          <div className="absolute top-1 right-1 w-6 h-4 bg-orange-200 border border-orange-400 text-xs"></div>
+                        </div>
+                      )}
+                      {tier.id === "03" && (
+                        <div className="relative">
+                          <div className="w-20 h-16 bg-gray-100 border-2 border-gray-400 rounded-sm"></div>
+                          <div className="absolute top-2 left-2 w-16 h-12 bg-white border border-gray-300"></div>
+                          <div className="absolute top-1 right-1 w-4 h-3 bg-orange-200 border border-orange-400"></div>
+                          <div className="absolute bottom-2 right-2 w-8 h-2 bg-black rounded-full"></div>
+                        </div>
+                      )}
+                      {tier.id === "04" && (
+                        <div className="relative">
+                          <div className="w-20 h-16 bg-gradient-to-b from-yellow-400 to-yellow-600 border-4 border-yellow-500 rounded-sm"></div>
+                          <div className="absolute inset-2 bg-white border border-gray-300"></div>
+                          <div className="absolute top-1 right-1 w-4 h-3 bg-orange-200 border border-orange-400"></div>
+                          <div className="absolute -top-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
+                          <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
+                          <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
+                          <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
+                        </div>
+                      )}
+                      {tier.id === "05" && (
+                        <div className="relative">
+                          <div className="w-20 h-16 bg-gray-600 rounded-t-full"></div>
+                          <div className="absolute top-4 left-2 w-16 h-8 bg-gray-700 rounded-sm"></div>
+                          <div className="absolute top-6 left-4 w-12 h-4 border-2 border-white"></div>
+                          <div className="absolute top-1 right-2 w-6 h-4 bg-orange-200 border border-orange-400 text-xs"></div>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                {/* Features */}
-                <div className="mb-8">
-                  <ul className="space-y-2">
-                    {tier.features.map((feature, index) => (
-                      <li key={index} className="flex items-start text-sm text-gray-700">
-                        <span className="mr-2 text-gray-400">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  {/* Features */}
+                  <div className="mb-8">
+                    <ul className="space-y-2">
+                      {tier.features.map((feature, index) => (
+                        <li key={index} className="flex items-start text-sm text-gray-700">
+                          <span className="mr-2 text-gray-400">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                {/* Button */}
-                <Button
-                  onClick={() => handlePurchaseClick(tier)}
-                  variant="outline"
-                  className="w-full mt-auto bg-transparent border-gray-400 text-gray-700 hover:bg-gray-50 rounded-full py-6"
-                >
-                  COMPRAR
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                  {/* Button */}
+                  <Button
+                    onClick={() => handlePurchaseClick(tier)}
+                    variant="outline"
+                    className="w-full mt-auto bg-transparent border-gray-400 text-gray-700 hover:bg-gray-50 rounded-full py-6"
+                  >
+                    COMPRAR
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
+
+      <FAQSection />
 
       {/* Checkout Modal */}
       <Dialog open={showCheckout} onOpenChange={setShowCheckout}>
