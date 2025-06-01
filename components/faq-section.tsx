@@ -47,18 +47,18 @@ export function FAQSection() {
   ]
 
   return (
-    <div className="py-16 px-8 bg-[#E6E3E0]">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-serif text-center mb-16">PREGUNTAS FRECUENTES</h2>
+    <div className="py-40 px-8 bg-[#E9E5E2]">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-serif text-center mb-24">PREGUNTAS FRECUENTES</h2>
 
-        <Accordion type="single" collapsible className="space-y-6">
+        <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index}>
-              <AccordionItem value={`item-${index}`} className="border-b border-gray-300 pb-6">
-                <AccordionTrigger className="flex justify-between text-left font-serif text-lg">
+              <AccordionItem value={`item-${index}`} className="border-b border-[#D0CBC8] pb-4">
+                <AccordionTrigger className="flex justify-between text-left font-serif text-xl">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pt-4 text-gray-700 font-serif">{faq.answer}</AccordionContent>
+                <AccordionContent className="pt-2 pr-12 text-gray-700 font-serif text-lg">{faq.answer}</AccordionContent>
               </AccordionItem>
             </div>
           ))}
