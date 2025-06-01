@@ -35,7 +35,7 @@
     @apply bg-background text-foreground;
   }
   .font-serif {
-    font-family: var(--font-playfair), serif;
+    font-family: var(--font-garamond), serif;
   }
 }
 
