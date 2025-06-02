@@ -65,7 +65,7 @@ export function ExperienceSection() {
         </div>
 
         {/* Right side - Quote */}
-        <div className="flex justify-center px-4 pt-24 pb-16 items-center md:min-h-[100vh]">
+        <div className="flex justify-center px-4 pt-24 pb-16 items-center md:min-h-[100vh] md:pl-16">
           <img
             src="/images/note.png"
             alt="Classical statue surrounded by ivy"
