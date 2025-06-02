@@ -11,7 +11,7 @@ export function ExperienceSection() {
   }
 
   return (
-    <div className="bg-[#26221C] text-white">
+    <div className="bg-[#26221C] text-white border-b-4 border-gold">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 items-center md:min-h-[100vh]">
       
         {/* Left side - Text content */}
