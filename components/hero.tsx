@@ -30,7 +30,7 @@ export function HeroSection() {
       </div>
 
       {/* Logo */}
-      <div className="text-center pb-[3vh] md:pb-[10vh]">
+      <div className="text-center pb-[3vh] md:pb-[12vh]">
         <svg className="w-full h-auto" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet">
           <defs>
             <radialGradient id="vernissageGradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
@@ -43,7 +43,7 @@ export function HeroSection() {
             y="50%" 
             dominantBaseline="middle" 
             textAnchor="middle"
-            className="text-[19rem] md:text-[10rem] font-heading blur-[0.2px]"
+            className="text-[19rem] md:text-[11rem] font-heading blur-[0.2px]"
             style={{ fill: "url(#vernissageGradient)" }}
           >
             VERNISSAGE
