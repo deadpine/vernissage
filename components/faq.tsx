@@ -60,7 +60,7 @@ export function FAQSection() {
                 <AccordionTrigger className="flex justify-between text-left font-serif text-xl">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pt-2 pr-12 text-gray-700 font-serif text-lg">{faq.answer}</AccordionContent>
+                <AccordionContent className="pt-2 pr-12 text-gray-800 font-serif text-lg">{faq.answer}</AccordionContent>
               </AccordionItem>
             </div>
           ))}
