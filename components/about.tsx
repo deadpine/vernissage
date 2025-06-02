@@ -33,7 +33,7 @@ export function AboutSection() {
           <Button
             onClick={scrollToTiers}
             variant="outline"
-            className="bg-transparent border border-gray-800 text-gray-800 hover:bg-gray-900 hover:text-white rounded-full px-6 py-4 text-lg font-serif transition-colors duration-300"
+            className="bg-transparent border border-gray-800 text-gray-800 hover:bg-gray-900 hover:text-white rounded-full px-8 py-6 text-lg font-serif transition-colors duration-300"
           >
             COMPRAR TICKETS
           </Button>

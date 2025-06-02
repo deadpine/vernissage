@@ -58,7 +58,7 @@ export function ExperienceSection() {
           <Button
             onClick={scrollToTiers}
             variant="outline"
-            className="bg-transparent border border-white text-white hover:bg-white hover:text-[#1a1a18] rounded-full px-6 py-4 text-lg font-serif transition-colors duration-300"
+            className="bg-transparent border border-white/50 text-white hover:bg-white hover:text-[#1a1a18] rounded-full px-8 py-6 text-lg font-serif transition-colors duration-300"
           >
             COMPRAR TICKETS
           </Button>
