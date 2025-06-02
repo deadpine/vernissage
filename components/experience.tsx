@@ -65,13 +65,12 @@ export function ExperienceSection() {
         </div>
 
         {/* Right side - Quote */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="max-w-md text-right">
-            <p className="text-2xl md:text-3xl font-serif leading-relaxed">
-              Vernissage es una <em className="italic">performance</em> teatral, una curaduría gastronómica integrada
-              al relato, pistas ocultas que invitan descubrir una historia con muchas capas.
-            </p>
-          </div>
+        <div className="flex justify-center px-4 pt-24 pb-16 items-center md:min-h-[100vh]">
+          <img
+            src="/images/note.png"
+            alt="Classical statue surrounded by ivy"
+            className="w-auto h-full object-cover max-w-[20rem] md:max-w-[26rem]"
+          />
         </div>
         
       </div>
