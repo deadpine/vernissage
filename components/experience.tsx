@@ -69,7 +69,7 @@ export function ExperienceSection() {
           <img
             src="/images/note.png"
             alt="Classical statue surrounded by ivy"
-            className="w-auto h-full object-cover max-w-[20rem] md:max-w-[26rem]"
+            className="w-auto h-full object-cover max-w-[22rem] md:max-w-[26rem]"
           />
         </div>
         
