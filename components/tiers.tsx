@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Copy } from "lucide-react"
 
 interface Tier {
   title: string
@@ -84,7 +85,7 @@ export function TiersSection() {
 
   const getCardPaymentLink = (tierTitle: string) => {
     const links = {
-      CÓMPLICE: "https://payment.vernissage.com/complice",
+      CÓMPLICE: "https://buy.stripe.com/aFa14o6D9acg2bogx4gjC00",
       "EN LA LISTA": "https://payment.vernissage.com/en-la-lista",
       ANFITRIÓN: "https://payment.vernissage.com/anfitrion",
       MECENAS: "https://payment.vernissage.com/mecenas",
@@ -156,9 +157,9 @@ export function TiersSection() {
         }}
       >
         <DialogContent className="max-w-lg">
-          <DialogHeader>
+          {/* <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-center font-serif">¡Gracias por tu apoyo!</DialogTitle>
-          </DialogHeader>
+          </DialogHeader> */}
 
           <div className="py-6 space-y-6">
             {/* Selected Tier Information */}
@@ -179,7 +180,7 @@ export function TiersSection() {
             )}
 
             <div className="text-center">
-              <p className="text-gray-600 font-serif mb-6">Selecciona tu método de pago preferido:</p>
+              <p className="text-gray-600 font-serif mb-6">Cómo queres pagar?</p>
             </div>
 
             {/* Payment Methods */}
@@ -194,7 +195,7 @@ export function TiersSection() {
                     <div className="text-2xl">🏦</div>
                     <div>
                       <h4 className="font-semibold text-gray-900 font-serif text-sm">Transferencia bancaria</h4>
-                      <p className="text-xs text-gray-600">Transferencia directa</p>
+                      <p className="text-xs text-gray-600">En Uruguay</p>
                     </div>
                   </div>
                 </div>
@@ -209,7 +210,7 @@ export function TiersSection() {
                   <div className="flex flex-col items-center space-y-2">
                     <div className="text-2xl">₿</div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 font-serif text-sm">Cripto BTC/USDC</h4>
+                      <h4 className="font-semibold text-gray-900 font-serif text-sm">Cripto</h4>
                       <p className="text-xs text-gray-600">Bitcoin o USD Coin</p>
                     </div>
                   </div>
@@ -227,7 +228,7 @@ export function TiersSection() {
                   <div className="text-2xl">💳</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 font-serif text-sm">Tarjeta débito/crédito</h4>
-                    <p className="text-xs text-gray-600">+5% procesamiento</p>
+                    <p className="text-xs text-gray-600">+10% por procesamiento</p>
                   </div>
                 </a>
               </div>
@@ -252,46 +253,42 @@ export function TiersSection() {
                 <div>
                   <p className="font-semibold text-sm font-serif mb-2">Pago en BTC:</p>
                   <div className="flex items-center space-x-2">
-                    <code className="bg-white px-2 py-1 rounded text-xs flex-1 border">1234567890</code>
+                    <code className="bg-white px-2 py-1 rounded text-xs flex-1 border truncate overflow-hidden">bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw</code>
                     <Button
                       size="sm"
                       variant="outline"
-                      onClick={() => copyToClipboard("1234567890")}
+                      onClick={() => copyToClipboard("bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw")}
                       className="text-xs"
                     >
-                      Copy
+                      <Copy className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
                 <div>
                   <p className="font-semibold text-sm font-serif mb-2">Pago en USDC (ERC20):</p>
                   <div className="flex items-center space-x-2">
-                    <code className="bg-white px-2 py-1 rounded text-xs flex-1 border">1234567890</code>
+                    <code className="bg-white px-2 py-1 rounded text-xs flex-1 border truncate overflow-hidden">1234567890</code>
                     <Button
                       size="sm"
                       variant="outline"
                       onClick={() => copyToClipboard("1234567890")}
                       className="text-xs"
                     >
-                      Copy
+                      <Copy className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
               </div>
             )}
 
-            <div className="text-center pt-4">
-              <p className="text-sm text-gray-500 font-serif mb-4">
-                Pronto implementaremos el sistema de pagos. Mientras tanto, puedes contactarnos directamente para
-                completar tu compra.
-              </p>
+            {/* <div className="text-center pt-4">
               <Button
                 onClick={() => setShowCheckout(false)}
-                className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 font-serif"
+                className="w-full bg-white hover:bg-gray-800 text-gray-900 py-3 font-serif"
               >
-                Cerrar
+                Cancelar
               </Button>
-            </div>
+            </div> */}
           </div>
         </DialogContent>
       </Dialog>
