@@ -78,6 +78,9 @@ export function TiersSection() {
 
   return (
     <div id="tiers-section" className="py-20">
+
+      <h2 className="text-7xl font-heading text-gray-900 text-center py-20">TICKETS</h2>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-x divide-[#D0CCC8]">
         {tiers.map((tier, index) => (
           <Card key={index}>

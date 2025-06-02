@@ -15,7 +15,7 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
 
         {/* Left side - Text content */}
-        <div className="space-y-10 px-4 pt-24 pb-20 flex flex-col justify-center items-start md:min-h-[100vh] md:py-12 md:pr-11">
+        <div className="space-y-10 px-4 pt-24 pb-20 flex flex-col justify-center items-start md:min-h-[100vh] md:py-16 md:pr-11">
 
           <h2 className="text-7xl font-heading text-gray-900 leading-tight">VERNISSAGE</h2>
 

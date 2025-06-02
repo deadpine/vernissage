@@ -11,11 +11,11 @@ export function ExperienceSection() {
   }
 
   return (
-    <div className="py-16 px-8 bg-[#26221C] text-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 items-center  md:min-h-[100vh]">
+    <div className="bg-[#26221C] text-white">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 items-center md:min-h-[100vh]">
       
         {/* Left side - Text content */}
-        <div className="space-y-10">
+        <div className="space-y-10 px-4 py-16">
           <h2 className="text-6xl font-heading leading-tight">LA EXPERIENCIA</h2>
 
           <p className="mb-10 text-lg font-serif">
@@ -65,11 +65,11 @@ export function ExperienceSection() {
         </div>
 
         {/* Right side - Quote */}
-        <div className="flex justify-center px-4 pt-24 pb-16 items-center md:min-h-[100vh] md:pl-16">
+        <div className="flex justify-center px-4 pt-8 pb-24 items-center md:pl-16 md:py-20">
           <img
             src="/images/note.png"
             alt="Classical statue surrounded by ivy"
-            className="w-auto h-full object-cover max-w-[22rem] md:max-w-[26rem]"
+            className="w-auto h-full object-cover max-w-[22rem] md:max-w-[25rem]"
           />
         </div>
         
