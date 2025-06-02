@@ -77,14 +77,17 @@ export function TiersSection() {
   }
 
   return (
-    <div id="tiers-section" className="py-20">
+    <div id="tiers-section" className="py-24 bg-[#EEEBE8]">
 
-      <h2 className="text-7xl font-heading text-gray-900 text-center py-20">TICKETS</h2>
+      <div className="pb-24 pt-16">
+        <h2 className="text-7xl font-heading text-gray-900 text-center pb-8">TICKETS</h2>
+        <p className="max-w-md mx-auto text-center text-gray-800 font-serif text-xl">Con la compra de tu ticket nos ayudas a financiar la producción de esta experiencia única</p>
+      </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-x divide-[#D0CCC8]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-x divide-[#D0CCC8] pt-8">
         {tiers.map((tier, index) => (
           <Card key={index}>
-            <CardContent className="p-5 h-full flex flex-col gap-9">
+            <CardContent className="p-5 h-full flex flex-col gap-10">
               
               <div className="flex items-center justify-between">
                 <p className="text-xs font-semibold text-gray-900">{tier.title}</p>
@@ -106,8 +109,8 @@ export function TiersSection() {
               <div className="flex-1">
                 <ul className="space-y-2">
                   {tier.features.map((feature, index) => (
-                    <li key={index} className="flex items-start text-sm text-gray-700">
-                      <span className="mr-2 text-gray-400">•</span>
+                    <li key={index} className="flex items-start text-sm text-gray-800">
+                      <span className="mr-2 text-gray-500">•</span>
                       <span>
                         {feature === "2 entradas" || feature === "1 entrada" ? (
                           <strong>{feature}</strong>
@@ -123,7 +126,7 @@ export function TiersSection() {
               <Button
                 onClick={() => handlePurchaseClick(tier)}
                 variant="outline"
-                className="w-full mt-auto bg-transparent border-gray-400 text-gray-700 hover:bg-gray-50 rounded-full py-6"
+                className="w-full font-serif font-medium text-lg py-6 bg-transparent border-[#989693] text-[#423324] hover:bg-gray-900 hover:text-white rounded-full"
               >
                 COMPRAR
               </Button>
