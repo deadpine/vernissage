@@ -184,52 +184,39 @@ export function TiersSection() {
             </div>
 
             {/* Payment Methods */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-3">
               {/* Bank Transfer */}
-              <div className="border border-gray-200 rounded-lg overflow-hidden">
+              <div className="border border-stone-200 overflow-hidden">
                 <div
                   className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "bank" ? null : "bank")}
                 >
-                  <div className="flex flex-col items-center space-y-2">
-                    <div className="text-2xl">🏦</div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 font-serif text-sm">Transferencia bancaria</h4>
-                      <p className="text-xs text-gray-600">En Uruguay</p>
-                    </div>
-                  </div>
+                  <div className="text-3xl">🏦</div>
+                  <h4 className="font-semibold text-gray-900 font-sans text-base/5 flex-1">Transferencia bancaria</h4>
                 </div>
               </div>
 
               {/* Crypto Payment */}
-              <div className="border border-gray-200 rounded-lg overflow-hidden">
+              <div className="border border-stone-200 overflow-hidden">
                 <div
                   className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "crypto" ? null : "crypto")}
                 >
-                  <div className="flex flex-col items-center space-y-2">
-                    <div className="text-2xl">₿</div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 font-serif text-sm">Cripto</h4>
-                      <p className="text-xs text-gray-600">Bitcoin o USD Coin</p>
-                    </div>
-                  </div>
+                  <div className="text-3xl">💳</div>
+                  <h4 className="font-semibold text-gray-900 font-sans text-base/5 flex-1">Cripto Bitcoin o USD Coin</h4>
                 </div>
               </div>
 
               {/* Card Payment */}
-              <div className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 cursor-pointer transition-colors">
+              <div className="border border-stone-200 p-4 hover:bg-gray-50 cursor-pointer transition-colors">
                 <a
                   href={getCardPaymentLink(selectedTier?.title || "")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center space-y-2 w-full text-center"
                 >
-                  <div className="text-2xl">💳</div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 font-serif text-sm">Tarjeta débito/crédito</h4>
-                    <p className="text-xs text-gray-600">+10% por procesamiento</p>
-                  </div>
+                  <div className="text-3xl">💳</div>
+                  <h4 className="font-semibold text-gray-900 font-sans text-base/5 flex-1">Tarjeta de débito/crédito</h4>
                 </a>
               </div>
             </div>
