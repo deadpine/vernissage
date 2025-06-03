@@ -86,10 +86,10 @@ export function TiersSection() {
   const getCardPaymentLink = (tierTitle: string) => {
     const links = {
       CÓMPLICE: "https://buy.stripe.com/aFa14o6D9acg2bogx4gjC00",
-      "EN LA LISTA": "https://payment.vernissage.com/en-la-lista",
-      ANFITRIÓN: "https://payment.vernissage.com/anfitrion",
-      MECENAS: "https://payment.vernissage.com/mecenas",
-      "ADMIRADOR SECRETO": "https://payment.vernissage.com/admirador-secreto",
+      "EN LA LISTA": "https://buy.stripe.com/dRmeVe9Pl8483fs1CagjC04",
+      ANFITRIÓN: "https://buy.stripe.com/eVq8wQe5Beswg2eft0gjC03",
+      MECENAS: "https://buy.stripe.com/6oU28saTp3NSeYadkSgjC02",
+      "ADMIRADOR SECRETO": "https://buy.stripe.com/5kQ28sgdJfwA03g0y6gjC01",
     }
     return links[tierTitle as keyof typeof links] || "#"
   }
