@@ -181,50 +181,50 @@ export function TiersSection() {
             </div>
 
             {/* Payment Methods */}
-            <div className="grid grid-cols-3 md:grid-cols-3">
+            <div className="grid grid-cols-3">
               {/* Bank Transfer */}
               <div className="border border-stone-200 overflow-hidden">
                 <div
-                  className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
+                  className="py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "bank" ? null : "bank")}
                 >
                   <div className="text-3xl flex justify-center">
-                    <Landmark className="h-8 w-8" />
+                    <Landmark className="h-6 w-6" />
                   </div>
-                  <h4 className="text-xs font-bold text-gray-700 uppercase flex-1">Transferencia bancaria</h4>
+                  <h4 className="py-4 text-xs font-semibold text-gr9y-700 uppercase flex-1">Transferencia bancaria</h4>
                 </div>
               </div>
 
               {/* Crypto Payment */}
               <div className="border border-stone-200 overflow-hidden">
                 <div
-                  className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
+                  className="py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "crypto" ? null : "crypto")}
                 >
                   <div className="text-3xl flex justify-center">
-                    <Bitcoin className="h-8 w-8" />
+                    <Bitcoin className="h-6 w-6" />
                   </div>
-                  <h4 className="text-xs font-bold text-gray-700 uppercase flex-1">Cripto Bitcoin o USDC</h4>
+                  <h4 className="py-4 text-xs font-semibold text-g9ay-700 uppercase flex-1">Cripto Bitcoin o USDC</h4>
                 </div>
               </div>
 
               {/* Card Payment */}
               <div className="border border-stone-200 overflow-hidden">
                 <div
-                  className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
+                  className="py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "card" ? null : "card")}
                 >
                   <div className="text-3xl flex justify-center">
-                    <CreditCard className="h-8 w-8" />
+                    <CreditCard className="h-6 w-6" />
                   </div>
-                  <h4 className="text-xs font-bold text-gray-700 uppercase flex-1">Tarjeta de débito/crédito</h4>
+                  <h4 className="py-4 text-xs font-semibold text-gray-900 uppercase flex-1">Tarjeta de débito/crédito</h4>
                 </div>
               </div>
             </div>
 
             {/* Payment Details - Show below the row */}
             {selectedPaymentMethod === "bank" && (
-              <div className="mt-4 p-4 bg-gray-50 rounded-lg border">
+              <div className="mt-4 p-4 bg-gray-50 rounded-lg border max-w-full">
                 <div className="space-y-2 text-sm font-serif">
                   <p>
                     <strong>Marina di Fonzo</strong>
@@ -237,41 +237,43 @@ export function TiersSection() {
             )}
 
             {selectedPaymentMethod === "crypto" && (
-              <div className="mt-4 p-4 bg-gray-50 rounded-lg border space-y-4">
-                <div>
-                  <p className="font-semibold text-sm font-serif mb-2">Pago en BTC:</p>
-                  <div className="flex items-center space-x-2">
-                    <code className="bg-white px-2 py-1 rounded text-xs flex-1 border truncate overflow-hidden">bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw</code>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => copyToClipboard("bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw")}
-                      className="text-xs"
-                    >
-                      <Copy className="h-4 w-4" />
-                    </Button>
+              <div className="mt-4 p-4 bg-gray-50 rounded-lg border max-w-full">
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-semibold text-sm font-serif mb-2">Pago en BTC:</p>
+                    <div className="flex items-center gap-2">
+                      <code className="bg-white px-2 py-1 rounded text-xs flex-1 border break-all">bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw</code>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => copyToClipboard("bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw")}
+                        className="shrink-0"
+                      >
+                        <Copy className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm font-serif mb-2">Pago en USDC (ERC20):</p>
-                  <div className="flex items-center space-x-2">
-                    <code className="bg-white px-2 py-1 rounded text-xs flex-1 border truncate overflow-hidden">1234567890</code>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => copyToClipboard("1234567890")}
-                      className="text-xs"
-                    >
-                      <Copy className="h-4 w-4" />
-                    </Button>
+                  <div>
+                    <p className="font-semibold text-sm font-serif mb-2">Pago en USDC (ERC20):</p>
+                    <div className="flex items-center gap-2">
+                      <code className="bg-white px-2 py-1 rounded text-xs flex-1 border break-all">1234567890</code>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => copyToClipboard("1234567890")}
+                        className="shrink-0"
+                      >
+                        <Copy className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
             )}
 
             {selectedPaymentMethod === "card" && (
-              <div className="mt-4 p-4 bg-gray-50 rounded-lg border space-y-4">
-                <p className="text-sm font-serif text-gray-700">Se agregará un 10% adicional en concepto de gastos de procesamiento.</p>
+              <div className="mt-4 p-4 bg-gray-50 rounded-lg border max-w-full">
+                <p className="text-sm font-serif text-gray-700 mb-4">Se agregará un 10% adicional en concepto de gastos de procesamiento.</p>
                 <Button
                   onClick={() => window.open(getCardPaymentLink(selectedTier?.title || ""), "_blank")}
                   className="w-full bg-white hover:bg-gray-800 text-gray-900 hover:text-white py-3 font-serif"
