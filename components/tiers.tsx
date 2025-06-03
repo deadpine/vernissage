@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Copy } from "lucide-react"
+import { Copy, Landmark, Bitcoin, CreditCard } from "lucide-react"
 
 interface Tier {
   title: string
@@ -156,10 +156,7 @@ export function TiersSection() {
           if (!open) setSelectedPaymentMethod(null)
         }}
       >
-        <DialogContent className="max-w-lg">
-          {/* <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-center font-serif">¡Gracias por tu apoyo!</DialogTitle>
-          </DialogHeader> */}
+        <DialogContent className="max-w-2xl">
 
           <div className="py-6 space-y-6">
             {/* Selected Tier Information */}
@@ -184,15 +181,17 @@ export function TiersSection() {
             </div>
 
             {/* Payment Methods */}
-            <div className="grid grid-cols-1 md:grid-cols-3">
+            <div className="grid grid-cols-3 md:grid-cols-3">
               {/* Bank Transfer */}
               <div className="border border-stone-200 overflow-hidden">
                 <div
                   className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "bank" ? null : "bank")}
                 >
-                  <div className="text-3xl">🏦</div>
-                  <h4 className="font-semibold text-gray-900 font-sans text-base/5 flex-1">Transferencia bancaria</h4>
+                  <div className="text-3xl flex justify-center">
+                    <Landmark className="h-8 w-8" />
+                  </div>
+                  <h4 className="text-xs font-bold text-gray-700 uppercase flex-1">Transferencia bancaria</h4>
                 </div>
               </div>
 
@@ -202,22 +201,24 @@ export function TiersSection() {
                   className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "crypto" ? null : "crypto")}
                 >
-                  <div className="text-3xl">💳</div>
-                  <h4 className="font-semibold text-gray-900 font-sans text-base/5 flex-1">Cripto Bitcoin o USD Coin</h4>
+                  <div className="text-3xl flex justify-center">
+                    <Bitcoin className="h-8 w-8" />
+                  </div>
+                  <h4 className="text-xs font-bold text-gray-700 uppercase flex-1">Cripto Bitcoin o USDC</h4>
                 </div>
               </div>
 
               {/* Card Payment */}
-              <div className="border border-stone-200 p-4 hover:bg-gray-50 cursor-pointer transition-colors">
-                <a
-                  href={getCardPaymentLink(selectedTier?.title || "")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center space-y-2 w-full text-center"
+              <div className="border border-stone-200 overflow-hidden">
+                <div
+                  className="p-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
+                  onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "card" ? null : "card")}
                 >
-                  <div className="text-3xl">💳</div>
-                  <h4 className="font-semibold text-gray-900 font-sans text-base/5 flex-1">Tarjeta de débito/crédito</h4>
-                </a>
+                  <div className="text-3xl flex justify-center">
+                    <CreditCard className="h-8 w-8" />
+                  </div>
+                  <h4 className="text-xs font-bold text-gray-700 uppercase flex-1">Tarjeta de débito/crédito</h4>
+                </div>
               </div>
             </div>
 
@@ -265,6 +266,18 @@ export function TiersSection() {
                     </Button>
                   </div>
                 </div>
+              </div>
+            )}
+
+            {selectedPaymentMethod === "card" && (
+              <div className="mt-4 p-4 bg-gray-50 rounded-lg border space-y-4">
+                <p className="text-sm font-serif text-gray-700">Se agregará un 10% adicional en concepto de gastos de procesamiento.</p>
+                <Button
+                  onClick={() => window.open(getCardPaymentLink(selectedTier?.title || ""), "_blank")}
+                  className="w-full bg-white hover:bg-gray-800 text-gray-900 hover:text-white py-3 font-serif"
+                >
+                  Pago con tarjeta
+                </Button>
               </div>
             )}
 
