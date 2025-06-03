@@ -158,7 +158,7 @@ export function TiersSection() {
       >
         <DialogContent className="max-w-2xl">
 
-          <div className="py-6 space-y-6">
+          <div className="pt-8 pb-4 space-y-6">
             {/* Selected Tier Information */}
             {selectedTier && (
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
@@ -224,8 +224,8 @@ export function TiersSection() {
 
             {/* Payment Details - Show below the row */}
             {selectedPaymentMethod === "bank" && (
-              <div className="mt-4 p-8 rounded-lg border max-w-full bg-[#F7F5F3]">
-                <div className="space-y-2 text-base text-center">
+              <div className="mt-4 p-8 border max-w-full bg-[#E5E0DC]">
+                <div className="space-y-2 text-base text-center mb-4">
                   <p>
                     <strong>Marina di Fonzo</strong>
                   </p>
@@ -241,11 +241,11 @@ export function TiersSection() {
             )}
 
             {selectedPaymentMethod === "crypto" && (
-              <div className="mt-4 p-4 rounded-lg border max-w-full">
-                <div className="space-y-8">
+              <div className="mt-4 p-8 border max-w-full bg-[#E5E0DC]">
+                <div className="space-y-6">
                   <div>
                     <p className="font-semibold text-base text-center mb-2">Pago en BTC:</p>
-                    <div className="flex items-center bg-[#FCFBFA] rounded pl-3 pr-2 py-2">
+                    <div className="flex items-center bg-[#FCFBFA] rounded-lg pl-3 pr-2 py-2">
                       <code className="bg-none text-xs flex-1 break-all mr-2">bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw</code>
                       <Button
                         size="sm"
@@ -259,7 +259,7 @@ export function TiersSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-base text-center mb-2">Pago en USDC (ERC20):</p>
-                    <div className="flex items-center bg-[#FCFBFA] rounded pl-3 pr-2 py-2">
+                    <div className="flex items-center bg-[#FCFBFA] rounded-lg pl-3 pr-2 py-2">
                       <code className="bg-none text-xs flex-1 break-all mr-2">0x1234567890</code>
                       <Button
                         size="sm"
@@ -280,13 +280,13 @@ export function TiersSection() {
             )}
 
             {selectedPaymentMethod === "card" && (
-              <div className="mt-4 p-4 border max-w-full bg-[#F7F5F3]">
-                <p className="text-sm font-serif text-gray-700 mb-4">Se agregará un 10% adicional en concepto de gastos de procesamiento.</p>
+              <div className="mt-4 p-8 border max-w-full bg-[#E5E0DC] center">
+                <p className="text-base text-gray-900 mb-8">Se agregará un 10% adicional en concepto de gastos de procesamiento.</p>
                 <Button
                   onClick={() => window.open(getCardPaymentLink(selectedTier?.title || ""), "_blank")}
-                  className="w-full bg-white hover:bg-gray-800 text-gray-900 hover:text-white py-3 font-serif"
+                  className="w-full bg-gray-900 hover:bg-white text-white hover:text-gray-900 py-4"
                 >
-                  Pago con tarjeta
+                  Pagar con tarjeta
                 </Button>
               </div>
             )}
