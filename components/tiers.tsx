@@ -108,8 +108,8 @@ export function TiersSection() {
           <Card key={index}>
             <CardContent className="px-5 py-8 h-full flex flex-col gap-8 md:py-5">
               <div className="flex items-center justify-between">
-                <p className="text-xs font-semibold text-gray-900">{tier.title}</p>
-                <p className="text-xs font-medium text-gray-700">
+                <p className="text-base md:text-xs font-semibold text-gray-900">{tier.title}</p>
+                <p className="text-base md:text-xs font-medium text-gray-700">
                   USD <span className="font-bold text-gray-900">{tier.price}</span>
                 </p>
               </div>
@@ -119,7 +119,7 @@ export function TiersSection() {
                   <img
                     src={tier.image || "/placeholder.svg"}
                     alt={tier.title}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full max-w-[16rem] md:max-w-full object-contain"
                   />
                 </div>
               </div>
