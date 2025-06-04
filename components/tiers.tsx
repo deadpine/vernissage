@@ -98,8 +98,8 @@ export function TiersSection() {
     <div id="tiers-section" className="py-24 bg-[#EEEBE8]">
       <div className="pb-24 pt-16 px-8">
         <h2 className="text-7xl font-heading text-gray-900 text-center pb-8">TICKETS</h2>
-        <p className="max-w-md mx-auto text-center text-gray-800 font-serif text-xl">
-          Con la compra de tu ticket nos ayudas a financiar la producción de esta experiencia única
+        <p className="max-w-sm mx-auto text-center text-gray-800 font-serif text-xl">
+          Con la compra de tu ticket nos ayudas a producir esta experiencia única.
         </p>
       </div>
 
@@ -177,7 +177,7 @@ export function TiersSection() {
             )}
 
             <div className="text-center">
-              <p className="text-gray-600 font-serif mb-6">Cómo queres pagar?</p>
+              <p className="text-gray-900 text-lg font-serif mb-6">¿Cómo queres pagar?</p>
             </div>
 
             {/* Payment Methods */}

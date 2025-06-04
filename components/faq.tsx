@@ -25,7 +25,7 @@ export function FAQSection() {
         "Los tickets solo están disponibles en esta preventa. Con la compra de tu ticket nos ayudas a financiar la producción de la obra. No habrá venta de tickets en la entrada y los cupos son limitados por lo cual te recomendamos adquirir el tuyo lo antes posible! ",
     },
     {
-      question: "¿Una vez que compre el ticket que pasa?",
+      question: "¿Una vez que compre el ticket qué pasa?",
       answer:
         "Vas a recibir un mail de confirmación y un mes antes del estreno te vamos a contactar para que puedas agendarte para alguna de las funciones previstas durante el mes de Noviembre.",
     },

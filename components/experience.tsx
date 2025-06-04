@@ -43,7 +43,7 @@ export function ExperienceSection() {
               <span className="mr-3">•</span>
               <div>
                 <p className="font-bold">Cocktail y banquete incluidos</p>
-                <p>Todas las funciones incluyen comida y bebida, sin costo adicional</p>
+                <p>Todas las funciones incluyen comida y bebida</p>
               </div>
             </li>
             <li className="flex items-start">
