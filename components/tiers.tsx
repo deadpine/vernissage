@@ -158,73 +158,73 @@ export function TiersSection() {
       >
         <DialogContent className="max-w-2xl">
 
-          <div className="pt-8 pb-4 space-y-6">
+          <div className="pt-8 pb-4">
             {/* Selected Tier Information */}
             {selectedTier && (
-              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
-                <div className="w-16 h-16 flex-shrink-0">
+              <div className="flex justify-center items-center space-x-4 border-y border-[#968C83]">
+                <div className="w-32 h-32 flex-shrink-0">
                   <img
                     src={selectedTier.image || "/placeholder.svg"}
                     alt={selectedTier.title}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-lg text-gray-900">{selectedTier.title}</h3>
-                  <p className="text-xl font-bold text-gray-700">USD {selectedTier.price}</p>
+                <div className="pr-12 pt-2">
+                  <h3 className="font-bold text-lg text-black">{selectedTier.title}</h3>
+                  <p className="text-lg font-bold text-black">USD {selectedTier.price}</p>
                 </div>
               </div>
             )}
 
             <div className="text-center">
-              <p className="text-gray-900 text-lg font-serif mb-6">¿Cómo queres pagar?</p>
+              <p className="text-black text-lg font-serif my-10">¿Cómo querés pagar?</p>
             </div>
 
             {/* Payment Methods */}
             <div className="grid grid-cols-3">
               {/* Bank Transfer */}
-              <div className="border border-stone-200 overflow-hidden">
+              <div className="border border-y-[#BEB1A7] overflow-hidden">
                 <div
-                  className="py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
+                  className="px-1 py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "bank" ? null : "bank")}
                 >
                   <div className="text-3xl flex justify-center">
                     <Landmark className="h-6 w-6" />
                   </div>
-                  <h4 className="py-4 text-xs font-semibold text-gr9y-700 uppercase flex-1">Transferencia bancaria</h4>
+                  <h4 className="pt-4 text-xs font-medium text-gr9y-700 uppercase flex-1">Transferencia bancaria</h4>
                 </div>
               </div>
 
               {/* Crypto Payment */}
-              <div className="border border-stone-200 overflow-hidden">
+              <div className="border border-y-[#BEB1A7] overflow-hidden">
                 <div
-                  className="py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
+                  className="px-1 py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "crypto" ? null : "crypto")}
                 >
                   <div className="text-3xl flex justify-center">
                     <Bitcoin className="h-6 w-6" />
                   </div>
-                  <h4 className="py-4 text-xs font-semibold text-g9ay-700 uppercase flex-1">Cripto Bitcoin / USDC</h4>
+                  <h4 className="pt-4 text-xs font-medium text-g9ay-700 uppercase flex-1">Cripto<br />Bitcoin / USDC</h4>
                 </div>
               </div>
 
               {/* Card Payment */}
-              <div className="border border-stone-200 overflow-hidden">
+              <div className="border border-y-[#BEB1A7] overflow-hidden">
                 <div
-                  className="py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
+                  className="px-1 py-4 hover:bg-gray-50 cursor-pointer transition-colors text-center"
                   onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === "card" ? null : "card")}
                 >
                   <div className="text-3xl flex justify-center">
                     <CreditCard className="h-6 w-6" />
                   </div>
-                  <h4 className="py-4 text-xs font-semibold text-gray-900 uppercase flex-1">Tarjeta de débito / crédito</h4>
+                  <h4 className="pt-4 text-xs font-medium text-gray-900 uppercase flex-1">Tarjeta<br />débito / crédito</h4>
                 </div>
               </div>
             </div>
 
             {/* Payment Details - Show below the row */}
             {selectedPaymentMethod === "bank" && (
-              <div className="mt-4 p-8 border max-w-full bg-[#E5E0DC]">
+              <div className="py-8 px-4 border max-w-full border-b-[#BEB1A7]">
                 <div className="space-y-2 text-base text-center mb-4">
                   <p>
                     <strong>Marina di Fonzo</strong>
@@ -233,7 +233,7 @@ export function TiersSection() {
                   <p>Caja de ahorro n° 9568716</p>
                   <p>Moneda: USD</p>
                 </div>
-                <div className="text-center pt-4 text-sm">
+                <div className="text-center pt-2 text-sm">
                   <p>Por favor enviá el comprobante por mail a:</p>
                   <p className="font-semibold"><a href="mailto:hola@vernissageteatro.com">hola@vernissageteatro.com</a></p>
                 </div>
@@ -241,7 +241,7 @@ export function TiersSection() {
             )}
 
             {selectedPaymentMethod === "crypto" && (
-              <div className="mt-4 p-8 border max-w-full bg-[#E5E0DC]">
+              <div className="py-8 px-4 border max-w-full border-b-[#BEB1A7]">
                 <div className="space-y-6">
                   <div>
                     <p className="font-semibold text-base text-center mb-2">Pago en BTC:</p>
@@ -271,7 +271,7 @@ export function TiersSection() {
                       </Button>
                     </div>
                   </div>
-                  <div className="text-center pt-4 text-sm">
+                  <div className="text-center pt-2 text-sm">
                     <p>Por favor enviá el comprobante por mail a:</p>
                     <p className="font-semibold"><a href="mailto:hola@vernissageteatro.com">hola@vernissageteatro.com</a></p>
                   </div>
@@ -280,8 +280,8 @@ export function TiersSection() {
             )}
 
             {selectedPaymentMethod === "card" && (
-              <div className="mt-4 p-8 border max-w-full bg-[#E5E0DC] center">
-                <p className="text-base text-gray-900 mb-8">Se agregará un 10% adicional en concepto de gastos de procesamiento.</p>
+              <div className="py-16 px-4 border max-w-full border-b-[#BEB1A7] center">
+                <p className="text-base text-center text-gray-900 mb-8">Se agregará un 10% adicional en concepto de gastos de procesamiento.</p>
                 <Button
                   onClick={() => window.open(getCardPaymentLink(selectedTier?.title || ""), "_blank")}
                   className="w-full bg-gray-900 hover:bg-white text-white hover:text-gray-900 py-4"
