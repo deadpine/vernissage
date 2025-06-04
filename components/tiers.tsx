@@ -161,7 +161,7 @@ export function TiersSection() {
           <div className="pt-8 pb-4">
             {/* Selected Tier Information */}
             {selectedTier && (
-              <div className="flex justify-center items-center space-x-4 border-y border-[#968C83]">
+              <div className="flex justify-center items-center space-x-4 border-y border-[#BEB1A7]">
                 <div className="w-32 h-32 flex-shrink-0">
                   <img
                     src={selectedTier.image || "/placeholder.svg"}
@@ -191,7 +191,7 @@ export function TiersSection() {
                   <div className="text-3xl flex justify-center">
                     <Landmark className="h-6 w-6" />
                   </div>
-                  <h4 className="pt-4 text-xs font-medium text-gr9y-700 uppercase flex-1">Transferencia bancaria</h4>
+                  <h4 className="pt-4 text-xs font-medium text-gr9y-700 uppercase flex-1">Transferencia<br />bancaria</h4>
                 </div>
               </div>
 
