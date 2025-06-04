@@ -246,11 +246,11 @@ export function TiersSection() {
                   <div>
                     <p className="font-semibold text-base text-center mb-2">Pago en BTC:</p>
                     <div className="flex items-center bg-[#FCFBFA] rounded-lg pl-3 pr-2 py-2">
-                      <code className="bg-none text-xs flex-1 break-all mr-2">bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw</code>
+                      <code className="bg-none text-xs flex-1 break-all mr-2">bc1qn5nhk94egdqqrpz9yv6wgsq5un6ulh2fpt8uvqr5x5s64z7pxcespgsdt9</code>
                       <Button
                         size="sm"
                         variant="outline"
-                        onClick={() => copyToClipboard("bc1qkfgdmxrdwpy0xt527trwgs25cp9kp5nguxafx4wlv39j0plwttds4ychkw")}
+                        onClick={() => copyToClipboard("bc1qn5nhk94egdqqrpz9yv6wgsq5un6ulh2fpt8uvqr5x5s64z7pxcespgsdt9")}
                         className="shrink-0"
                       >
                         <Copy className="h-4 w-4" />
@@ -260,11 +260,11 @@ export function TiersSection() {
                   <div>
                     <p className="font-semibold text-base text-center mb-2">Pago en USDC (ERC20):</p>
                     <div className="flex items-center bg-[#FCFBFA] rounded-lg pl-3 pr-2 py-2">
-                      <code className="bg-none text-xs flex-1 break-all mr-2">0x1234567890</code>
+                      <code className="bg-none text-xs flex-1 break-all mr-2">0xAA2426Ae33AC155fD6D4E9eAd7cCe32108abe7bb</code>
                       <Button
                         size="sm"
                         variant="outline"
-                        onClick={() => copyToClipboard("1234567890")}
+                        onClick={() => copyToClipboard("0xAA2426Ae33AC155fD6D4E9eAd7cCe32108abe7bb")}
                         className="shrink-0"
                       >
                         <Copy className="h-4 w-4" />
