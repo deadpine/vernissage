@@ -32,7 +32,7 @@ export function HeroSection() {
         </div>
 
         {/* Logo */}
-        <img src="/images/logo.svg" alt="Vernissage logo" className="w-full blur-[0.5px] pb-[13vh] md:pb-0" />
+        <img src="/images/logo.svg" alt="Vernissage logo" className="w-full blur-[0.5px] pb-[14vh] md:pb-0" />
 
         {/* Bottom elements */}
         <div className="flex grow justify-between items-end md:items-start py-3 md:py-8 relative">
