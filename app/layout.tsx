@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Vernissage",
   description: "Una experiencia teatral inmersiva",
   generator: "v0.dev",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
 }
 
 export default function RootLayout({
