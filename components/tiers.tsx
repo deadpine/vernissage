@@ -172,6 +172,9 @@ export function TiersSection() {
                 <div className="pr-12 pt-2">
                   <h3 className="font-bold text-lg text-black">{selectedTier.title}</h3>
                   <p className="text-lg font-bold text-black">USD {selectedTier.price}</p>
+                  {selectedTier.title === "CÓMPLICE" && (
+                    <p className="text-sm text-gray-600 mt-1 max-w-xs">* Tené en cuenta que este ticket no incluye entrada a la función.</p>
+                  )}
                 </div>
               </div>
             )}
