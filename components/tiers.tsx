@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Copy, Landmark, Bitcoin, CreditCard } from "lucide-react"
 
 interface Tier {
@@ -81,6 +81,17 @@ export function TiersSection() {
     } catch (err) {
       console.error("Failed to copy: ", err)
     }
+  }
+
+  const getGratefulPaymentLink = (tierTitle: string) => {
+    const links = {
+      CÓMPLICE: "https://www.grateful.me/vernissageteatro/complice",
+      "EN LA LISTA": "https://www.grateful.me/vernissageteatro/en-la-lista",
+      ANFITRIÓN: "https://www.grateful.me/vernissageteatro/anfitrion",
+      MECENAS: "https://www.grateful.me/vernissageteatro/mecenas",
+      "ADMIRADOR SECRETO": "https://www.grateful.me/vernissageteatro/admirador-secreto",
+    }
+    return links[tierTitle as keyof typeof links] || "#"
   }
 
   const getCardPaymentLink = (tierTitle: string) => {
@@ -261,16 +272,13 @@ export function TiersSection() {
                     </div>
                   </div>
                   <div>
-                    <p className="font-semibold text-base text-center mb-2">Pago en USDC (ERC20):</p>
-                    <div className="flex items-center bg-[#FCFBFA] rounded-lg pl-3 pr-2 py-2">
-                      <code className="bg-none text-xs flex-1 break-all mr-2">0xAA2426Ae33AC155fD6D4E9eAd7cCe32108abe7bb</code>
+                    <p className="font-semibold text-base text-center mb-2">Pago en Stablecoins:</p>
+                    <div className="flex items-center justify-center">
                       <Button
-                        size="sm"
-                        variant="outline"
-                        onClick={() => copyToClipboard("0xAA2426Ae33AC155fD6D4E9eAd7cCe32108abe7bb")}
-                        className="shrink-0"
+                        onClick={() => window.open(getGratefulPaymentLink(selectedTier?.title || ""), "_blank")}
+                        className="w-fit bg-gray-900 hover:bg-white text-white hover:text-gray-900 py-4"
                       >
-                        <Copy className="h-4 w-4" />
+                        Pagar con Grateful
                       </Button>
                     </div>
                   </div>
