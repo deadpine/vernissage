@@ -14,7 +14,7 @@ export default function Page() {
         <AboutSection />
         <ExperienceSection />
         <HistorySection />
-        <TiersSection />
+        {/* <TiersSection /> */}
         <FAQSection />
       </div>
       <Footer />
