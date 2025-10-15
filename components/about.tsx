@@ -20,8 +20,10 @@ export function AboutSection() {
           <h2 className="text-7xl font-heading text-gray-900 leading-tight">VERNISSAGE</h2>
 
           <p className="text-2xl font-serif text-gray-800">
-            Una experiencia íntima, sensorial y enigmática que combina arte visual, teatro de recorrido, gastronomía
-            y elementos de escape room en una casona con una historia única.
+            Llega a punta del este la experiencia teatral inmersiva más espectacular del año. Una propuesta que borra los límites entre arte, gastronomía, teatro y realidad.
+          </p>
+          <p className="text-2xl font-medium font-serif text-gray-800">
+            No vas a mirar una obra: vas a entrar en ella.
           </p>
 
           <p className="text-lg font-serif text-gray-800 pb-4">
