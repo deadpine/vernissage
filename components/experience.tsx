@@ -36,7 +36,7 @@ export function ExperienceSection() {
               <span className="mr-3">•</span>
               <div>
                 <p className="font-bold">Grupo por función</p>
-                <p>Entre 20 y 40 personas.</p>
+                <p>Entre 30 y 40 personas.</p>
               </div>
             </li>
             <li className="flex items-start">
