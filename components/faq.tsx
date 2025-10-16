@@ -1,10 +1,11 @@
 "use client"
 
+import React from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 interface FAQItem {
   question: string
-  answer: string
+  answer: string | React.ReactElement
 }
 
 export function FAQSection() {
@@ -43,6 +44,29 @@ export function FAQSection() {
       question: "¿Cómo puedo apoyar el proyecto?",
       answer:
         "Además de adquirir las entradas especiales “mecenas” y “admirador secreto”, podés sumarte como colaborador, aliado o patrocinador. Escribinos a hola@vernissageteatro.com para más info.",
+    },
+    {
+      question: "¿Quiénes somos?",
+      answer: (
+        <div className="space-y-4">
+          <p>Vernissage es posible gracias a un gran equipo:</p>
+          <div>
+            <p><b>Idea original y producción general:</b> Maru di Fonzo</p>
+            <p><b>Guion y dirección:</b> Bruno Luciani</p>
+            <p><b>Asistencia de dirección:</b> Jimena Vignolo</p>
+            <p><b>Project management:</b> Juan Cassinelli</p>
+            <p><b>Técnica e iluminación:</b> Nicolás Ferrarino</p>
+            <p><b>Escenografía:</b> Lucila Dickinson, Micaela Mandacen y Julia Proto</p>
+            <p><b>Vestuario:</b> Ángeles Partal</p>
+            <p><b>Maquillaje:</b> Silvana Lewi</p>
+            <p><b>Fotografía y video:</b> Camila García Aldabe</p>
+            <p><b>Dinámicas lúdicas:</b> Juan Pablo Romero</p>
+            <p><b>Diseño web:</b> Agostina Blanco </p>
+            <p><b>Catering:</b> Alan Zirlinger</p>
+          </div>
+          <p>Y un <b>elenco extraordinario</b>… cuya identidad preferimos mantener en secreto, para no anticipar las sorpresas que se develarán durante la obra.</p>
+        </div>
+      ),
     },
   ]
 
