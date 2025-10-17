@@ -36,7 +36,7 @@ export function HeroSection() {
 
         {/* Bottom elements */}
         <div className="flex grow justify-between items-end md:items-start py-3 md:py-8 relative">
-          <p className="text-xs font-semibold font-sans tracking-widest text-gold">ESTRENO NOVIEMBRE 2025</p>
+          <p className="text-xs font-semibold font-sans tracking-widest text-gold"><span className="hidden md:inline">ESTRENO </span>NOVIEMBRE 2025</p>
           <p className="text-xs font-semibold font-sans tracking-widest text-gold">PUNTA DEL ESTE</p>
         </div>
       </div>
