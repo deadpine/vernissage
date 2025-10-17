@@ -3,10 +3,10 @@
 import { Button } from "@/components/ui/button"
 
 export function ExperienceSection() {
-  const scrollToTiers = () => {
-    const tiersSection = document.getElementById("tiers-section")
-    if (tiersSection) {
-      tiersSection.scrollIntoView({ behavior: "smooth" })
+  const scrollToTickets = () => {
+    const ticketsSection = document.getElementById("tickets-section")
+    if (ticketsSection) {
+      ticketsSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 
@@ -56,7 +56,7 @@ export function ExperienceSection() {
           </ul>
 
           <Button
-            onClick={scrollToTiers}
+            onClick={scrollToTickets}
             variant="outline"
             className="bg-transparent border border-white/50 text-white hover:bg-white hover:text-[#1a1a18] rounded-full px-8 py-6 text-lg font-serif transition-colors duration-300"
           >

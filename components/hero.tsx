@@ -3,10 +3,10 @@
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
-  const scrollToTiers = () => {
-    const tiersSection = document.getElementById("tiers-section")
-    if (tiersSection) {
-      tiersSection.scrollIntoView({ behavior: "smooth" })
+  const scrollToTickets = () => {
+    const ticketsSection = document.getElementById("tickets-section")
+    if (ticketsSection) {
+      ticketsSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 
