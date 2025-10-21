@@ -33,6 +33,8 @@ export function FAQSection() {
             <p><b>Dinámicas lúdicas:</b> Juan Pablo Romero</p>
             <p><b>Diseño web:</b> Agostina Blanco </p>
             <p><b>Catering:</b> Alan Zirlinger</p>
+            <p><b>Redes:</b> Pietro Scalone</p>
+            <p><b>Canción Original:</b> Joaquin Bachrach</p>
           </div>
           <p>Y un <b>elenco extraordinario</b>… cuya identidad preferimos mantener en secreto, para no anticipar las sorpresas que se develarán durante la obra.</p>
         </div>
