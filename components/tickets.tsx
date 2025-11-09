@@ -88,7 +88,7 @@ export function Tickets() {
         </div>
       </div>
 
-      <p className="max-w-md mx-auto text-center text-gray-800 font-serif text-lg pt-8">
+      <p className="max-w-md mx-auto text-center text-gray-800 font-serif text-lg pt-8 font-size: 1.5rem">
         Todas las funciones incluyen banquete y bebidas.
       </p>
     </div>
