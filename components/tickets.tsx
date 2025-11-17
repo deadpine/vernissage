@@ -29,11 +29,25 @@ const tickets: Ticket[] = [
     day: "15",
     month: "NOV",
     link: "https://www.boletera.com.ar/vernissage/15nov",
+    soldOut: true,
   },
   {
     day: "23",
     month: "NOV",
     link: "https://www.boletera.com.ar/vernissage/23nov",
+    soldOut: true,
+  },
+  {
+    day: "05",
+    month: "DIC",
+    link: "https://www.boletera.com.ar/vernissage/5dic",
+    //soldOut: true,
+  },
+   {
+    day: "06",
+    month: "DIC",
+    link: "https://www.boletera.com.ar/vernissage/6dic",
+    //soldOut: true,
   },
 ]
 
@@ -53,7 +67,7 @@ export function Tickets() {
           height={100} 
           className="w-80 h-80 object-contain"
         />
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="w-full grid grid-cols-2 md:grid-cols-6 gap-4">
           {tickets.map((ticket, index) => (
             <div key={index} className="relative p-4 w-full h-80 gap-4 flex flex-col justify-between border border-[#B4ABA2]">
               <div className="flex flex-col items-start pt-2">
