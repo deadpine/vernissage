@@ -23,16 +23,31 @@ const tickets: Ticket[] = [
     day: "9",
     month: "NOV",
     link: "https://www.boletera.com.ar/vernissage/9nov",
+    soldOut: true,
   },
   {
     day: "15",
     month: "NOV",
     link: "https://www.boletera.com.ar/vernissage/15nov",
+    soldOut: true,
   },
   {
-    day: "22",
+    day: "23",
     month: "NOV",
-    link: "https://www.boletera.com.ar/vernissage/22nov",
+    link: "https://www.boletera.com.ar/vernissage/23nov",
+    soldOut: true,
+  },
+  {
+    day: "05",
+    month: "DIC",
+    link: "https://www.boletera.com.ar/vernissage/5dic",
+    //soldOut: true,
+  },
+   {
+    day: "06",
+    month: "DIC",
+    link: "https://www.boletera.com.ar/vernissage/6dic",
+    //soldOut: true,
   },
 ]
 
@@ -52,7 +67,7 @@ export function Tickets() {
           height={100} 
           className="w-80 h-80 object-contain"
         />
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="w-full grid grid-cols-2 md:grid-cols-6 gap-4">
           {tickets.map((ticket, index) => (
             <div key={index} className="relative p-4 w-full h-80 gap-4 flex flex-col justify-between border border-[#B4ABA2]">
               <div className="flex flex-col items-start pt-2">
@@ -88,7 +103,7 @@ export function Tickets() {
         </div>
       </div>
 
-      <p className="max-w-md mx-auto text-center text-gray-800 font-serif text-lg pt-8">
+      <p className="max-w-md mx-auto text-center text-gray-800 font-serif text-lg pt-8 font-size: 1.5rem">
         Todas las funciones incluyen banquete y bebidas.
       </p>
     </div>
